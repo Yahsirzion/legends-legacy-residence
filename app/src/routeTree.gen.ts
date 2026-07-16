@@ -11,6 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as IntakeRouteImport } from './routes/intake'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FamiliesRouteImport } from './routes/families'
+import { Route as ResidenceRouteImport } from './routes/residence'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -23,6 +29,36 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
   path: '/robots.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntakeRoute = IntakeRouteImport.update({
+  id: '/intake',
+  path: '/intake',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamiliesRoute = FamiliesRouteImport.update({
+  id: '/families',
+  path: '/families',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidenceRoute = ResidenceRouteImport.update({
+  id: '/residence',
+  path: '/residence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +67,82 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/residence': typeof ResidenceRoute
+  '/families': typeof FamiliesRoute
+  '/contact': typeof ContactRoute
+  '/intake': typeof IntakeRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/residence': typeof ResidenceRoute
+  '/families': typeof FamiliesRoute
+  '/contact': typeof ContactRoute
+  '/intake': typeof IntakeRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/residence': typeof ResidenceRoute
+  '/families': typeof FamiliesRoute
+  '/contact': typeof ContactRoute
+  '/intake': typeof IntakeRoute
+  '/privacy': typeof PrivacyRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/robots.txt' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/residence'
+    | '/families'
+    | '/contact'
+    | '/intake'
+    | '/privacy'
+    | '/robots.txt'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/robots.txt' | '/sitemap.xml'
-  id: '__root__' | '/' | '/robots.txt' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/about'
+    | '/residence'
+    | '/families'
+    | '/contact'
+    | '/intake'
+    | '/privacy'
+    | '/robots.txt'
+    | '/sitemap.xml'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/residence'
+    | '/families'
+    | '/contact'
+    | '/intake'
+    | '/privacy'
+    | '/robots.txt'
+    | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ResidenceRoute: typeof ResidenceRoute
+  FamiliesRoute: typeof FamiliesRoute
+  ContactRoute: typeof ContactRoute
+  IntakeRoute: typeof IntakeRoute
+  PrivacyRoute: typeof PrivacyRoute
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -75,6 +163,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intake': {
+      id: '/intake'
+      path: '/intake'
+      fullPath: '/intake'
+      preLoaderRoute: typeof IntakeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/families': {
+      id: '/families'
+      path: '/families'
+      fullPath: '/families'
+      preLoaderRoute: typeof FamiliesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residence': {
+      id: '/residence'
+      path: '/residence'
+      fullPath: '/residence'
+      preLoaderRoute: typeof ResidenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +217,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ResidenceRoute: ResidenceRoute,
+  FamiliesRoute: FamiliesRoute,
+  ContactRoute: ContactRoute,
+  IntakeRoute: IntakeRoute,
+  PrivacyRoute: PrivacyRoute,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
