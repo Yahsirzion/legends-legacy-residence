@@ -1,28 +1,79 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "../components/site/Header";
+import { Footer } from "../components/site/Footer";
+import { Hero } from "../components/home/Hero";
+import { Mission } from "../components/home/Mission";
+import { LifeHere } from "../components/home/LifeHere";
+import { Honor } from "../components/home/Honor";
+import { InquiryBanner } from "../components/home/InquiryBanner";
+import { StructuredData } from "../components/StructuredData";
+
+const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+
+// No `address`/`geo` field on purpose: the residence is pre-opening and its
+// facility location is intentionally undisclosed (CLAUDE.md §2). A
+// LocalBusiness/PostalAddress schema risks a map pin reading as the facility
+// address, which the client explicitly ruled out (§5.5) — Organization only.
+const SCHEMA = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#org`,
+      name: "Legends Legacy Residence",
+      alternateName: "Legends Legacy Residence LLC",
+      url: SITE_URL,
+      logo: `${SITE_URL}/assets/logo-mark.png`,
+      description:
+        "A home for veterans opening soon in the Albany, NY area, offering veteran-focused shared housing with independence, dignity, and support.",
+      telephone: "+1-518-849-8008",
+      email: "info@legendslegacyresidence.com",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: "Legends Legacy Residence",
+      url: SITE_URL,
+      publisher: { "@id": `${SITE_URL}/#org` },
+    },
+  ],
+});
 
 export const Route = createFileRoute("/")({
-  // No title/description here on purpose: the home page inherits the app's
-  // editable page metadata from the root route (set via the marketplace meta
-  // API — title/favicon/og), so a shared link to "/" shows the owner's values.
-  // Add a `head` here only to give a SPECIFIC page its own title/description
-  // (a deeper route's head overrides the root's for that page).
+  head: () => ({
+    meta: [
+      { title: "Legends Legacy Residence: A Home for Veterans" },
+      {
+        name: "description",
+        content:
+          "Legends Legacy Residence is a home for veterans opening soon in the Albany, NY area. Veteran-focused shared housing with dignity and support. Begin your intake today.",
+      },
+      { property: "og:title", content: "Legends Legacy Residence: A Home for Veterans" },
+      {
+        property: "og:description",
+        content:
+          "A home for veterans opening soon in the Albany, NY area. Begin your intake today.",
+      },
+      { property: "og:url", content: SITE_URL },
+    ],
+    links: [{ rel: "canonical", href: SITE_URL }],
+  }),
   component: Index,
 });
 
-// Replace this placeholder. Routes are server-rendered — keep render SSR-safe
-// (no window/document at module top level or during render). See ./README.md.
 function Index() {
   return (
-    <div
-      data-higgsfield-blank-page-placeholder="REMOVE_THIS"
-      className="flex min-h-screen flex-col items-center justify-center gap-3 px-6 text-center"
-    >
-      <h1 className="text-2xl font-semibold tracking-tight">
-        Your website will live here.
-      </h1>
-      <p className="text-base text-gray-500">
-        Ask Higgsfield Supercomputer to build it.
-      </p>
-    </div>
+    <>
+      <StructuredData json={SCHEMA} />
+      <Header />
+      <main id="main-content">
+        <Hero />
+        <Mission />
+        <LifeHere />
+        <Honor />
+        <InquiryBanner />
+      </main>
+      <Footer />
+    </>
   );
 }
