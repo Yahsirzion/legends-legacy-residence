@@ -5,7 +5,7 @@ import { PageHero } from "../components/site/PageHero";
 import { ContactForm } from "../components/contact/ContactForm";
 import { PhoneLink, EmailLink } from "../components/site/ContactLinks";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

@@ -5,7 +5,7 @@ import { PageHero } from "../components/site/PageHero";
 import { PrimaryCta } from "../components/site/PrimaryCta";
 import { StructuredData } from "../components/StructuredData";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 const FAQS = [
   {

@@ -6,7 +6,7 @@ import { PageHero } from "../components/site/PageHero";
 import { LicensingDisclosure } from "../components/site/LicensingDisclosure";
 import { EmailLink } from "../components/site/ContactLinks";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

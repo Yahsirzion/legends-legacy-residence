@@ -4,7 +4,7 @@ import { Footer } from "../components/site/Footer";
 import { PageHero } from "../components/site/PageHero";
 import { PhoneLink, EMAIL } from "../components/site/ContactLinks";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 export const Route = createFileRoute("/intake")({
   head: () => ({

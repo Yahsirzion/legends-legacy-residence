@@ -8,7 +8,7 @@ import { Honor } from "../components/home/Honor";
 import { InquiryBanner } from "../components/home/InquiryBanner";
 import { StructuredData } from "../components/StructuredData";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 // No `address`/`geo` field on purpose: the residence is pre-opening and its
 // facility location is intentionally undisclosed (CLAUDE.md §2). A

@@ -5,7 +5,7 @@ import { PageHero } from "../components/site/PageHero";
 import { LicensingDisclosure } from "../components/site/LicensingDisclosure";
 import { ShieldIcon, KeyIcon, LaurelIcon, TorchIcon } from "../components/site/icons";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
+import { SITE_URL } from "../lib/site";
 
 export const Route = createFileRoute("/residence")({
   head: () => ({

@@ -7,62 +7,36 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportHiggsfieldError } from "../lib/higgsfield-error-reporting";
-import appMetaJson from "../app-meta.json";
+import { SITE_URL, SITE_NAME } from "../lib/site";
 
-const SITE_URL = "https://legendslegacyresidence.higgsfield.app";
-const SITE_NAME = "Legends Legacy Residence";
 const DEFAULT_TITLE = "Legends Legacy Residence: A Home for Veterans";
 const DEFAULT_DESCRIPTION =
   "A home for veterans opening soon in the Albany, NY area. Veteran-focused shared housing with dignity, structure, and support. Begin your intake today.";
 
-type AppMeta = {
-  og_title?: string | null;
-  og_description?: string | null;
-  og_image_url?: string | null;
-  favicon_url?: string | null;
-  og_video_url?: string | null;
-};
-
-const appMeta = appMetaJson as AppMeta;
-
-function toAbsolute(value: string | null | undefined): string | null {
-  if (!value) return null;
-  if (value.startsWith("http")) return value;
-  return `${SITE_URL}${value.startsWith("/") ? "" : "/"}${value}`;
-}
-
-function buildHead(meta: AppMeta) {
-  const title = meta.og_title ?? DEFAULT_TITLE;
-  const description = meta.og_description ?? DEFAULT_DESCRIPTION;
-  const ogImage = toAbsolute(meta.og_image_url);
-  const favicon = meta.favicon_url ?? null;
+function buildHead() {
+  const ogImage = `${SITE_URL}/assets/og-cover.png`;
 
   return {
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title },
-      { name: "description", content: description },
+      { title: DEFAULT_TITLE },
+      { name: "description", content: DEFAULT_DESCRIPTION },
       { name: "author", content: SITE_NAME },
       { name: "theme-color", content: "#1C2B45" },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE_NAME },
       { property: "og:locale", content: "en_US" },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
+      { property: "og:title", content: DEFAULT_TITLE },
+      { property: "og:description", content: DEFAULT_DESCRIPTION },
       { property: "og:url", content: SITE_URL },
-      { name: "twitter:card", content: ogImage ? "summary_large_image" : "summary" },
-      ...(ogImage
-        ? [
-            { property: "og:image", content: ogImage },
-            { name: "twitter:image", content: ogImage },
-          ]
-        : []),
+      { property: "og:image", content: ogImage },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: ogImage },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -72,8 +46,8 @@ function buildHead(meta: AppMeta) {
         href: "https://fonts.googleapis.com/css2?family=Marcellus&family=Figtree:wght@400;500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
-      ...(favicon ? [{ rel: "icon", href: favicon }] : []),
-      ...(favicon ? [{ rel: "apple-touch-icon", href: favicon }] : []),
+      { rel: "icon", href: "/favicon.png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "canonical", href: SITE_URL },
     ],
@@ -101,9 +75,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportHiggsfieldError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-cream px-6 text-center text-navy">
@@ -137,7 +108,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => buildHead(appMeta),
+  head: () => buildHead(),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -164,27 +135,8 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
-declare const __HF_DESIGN_INSPECTOR__: boolean;
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
-  useEffect(() => {
-    if (typeof __HF_DESIGN_INSPECTOR__ === "undefined" || !__HF_DESIGN_INSPECTOR__) {
-      return;
-    }
-
-    void import("../module/design-inspector/runtime")
-      .then(({ installHiggsfieldDesignInspector }) => {
-        installHiggsfieldDesignInspector();
-      })
-      .catch((error) => {
-        reportHiggsfieldError(
-          error instanceof Error ? error : new Error("Failed to load design inspector"),
-          { boundary: "higgsfield_design_inspector_import" },
-        );
-      });
-  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
