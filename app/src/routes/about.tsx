@@ -115,27 +115,83 @@ function AboutPage() {
           </div>
         </section>
 
-        {/* Leadership block: names and roles drawn only from the story above. */}
+        {/* Leadership: client-provided copy (2026-07-18), rendered verbatim
+            with em dashes spaced per site style. */}
         <section className="bg-white">
           <div className="mx-auto max-w-[1140px] px-6 py-16">
-            <h2 className="font-display text-xl text-navy">Leadership</h2>
-            <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-2">
+            <h2 className="font-display text-2xl text-navy">Leadership</h2>
+            <span className="rule-double mt-5" aria-hidden="true" />
+            <p className="mt-6 max-w-[65ch] text-navy/90">
+              The partnership between Zaheerah McGary Sawyers and Celesta
+              Blanch combines frontline human services experience with decades
+              of expertise in property management, insurance, risk management,
+              and business operations. Together, they provide the compassionate
+              leadership and professional oversight necessary to develop safe,
+              sustainable veteran housing.
+            </p>
+            <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
                 <div className="h-32 w-32 border border-gold/40 bg-cream" aria-hidden="true" />
-                <p className="mt-4 font-display text-lg text-navy">
-                  Zaheerah McGary Sawyers
+                <h3 className="mt-5 font-display text-xl text-navy">
+                  Frontline Expertise: Grounded in Human Dignity
+                </h3>
+                <p className="mt-1 text-sm font-semibold text-navy/70">
+                  Led by Zaheerah McGary Sawyers
                 </p>
-                <p className="text-sm text-navy/70">
-                  Founder, Direct Support Professional background
+                <p className="mt-4 text-navy/90">
+                  <strong className="font-semibold text-navy">Hands-On Empathy:</strong>{" "}
+                  As a Direct Support Professional, Zaheerah built a career on
+                  the ground floor of human services. This experience provided
+                  a deep understanding of what it takes to support
+                  individuals, manage complex residential dynamics, and
+                  empower people to maintain their daily dignity.
+                </p>
+                <p className="mt-4 text-navy/90">
+                  <strong className="font-semibold text-navy">A Resident-First Philosophy:</strong>{" "}
+                  She instills a core belief that housing is not just about
+                  four walls — it is about fostering an environment where
+                  individuals feel seen, respected, and capable of
+                  self-direction.
                 </p>
               </div>
               <div>
                 <div className="h-32 w-32 border border-gold/40 bg-cream" aria-hidden="true" />
-                <p className="mt-4 font-display text-lg text-navy">Celesta Blanch</p>
-                <p className="text-sm text-navy/70">Co-Owner</p>
+                <h3 className="mt-5 font-display text-xl text-navy">
+                  The Operational Backbone: Structured for Sustainability
+                </h3>
+                <p className="mt-1 text-sm font-semibold text-navy/70">
+                  Led by Celesta Blanch
+                </p>
+                <p className="mt-4 text-navy/90">
+                  <strong className="font-semibold text-navy">
+                    Strategic Stability &amp; Property Management:
+                  </strong>{" "}
+                  Bringing 6 years of hands-on experience in rental property
+                  management and homeownership, Celesta ensures the
+                  organization's physical assets and real estate operations
+                  run efficiently and safely.
+                </p>
+                <p className="mt-4 text-navy/90">
+                  <strong className="font-semibold text-navy">
+                    Financial &amp; Risk Responsibility:
+                  </strong>{" "}
+                  As an experienced professional with 30 years in the
+                  insurance industry — specializing in multi-state operations,
+                  regulatory compliance, claims recovery, and liability — her
+                  oversight provides the structural stability necessary to
+                  assure funders and community partners that they are
+                  investing in a capable, organized team equipped to sustain
+                  the mission for the long haul.
+                </p>
+                <p className="mt-4 text-navy/90">
+                  <strong className="font-semibold text-navy">Holistic Wellness Support:</strong>{" "}
+                  Celesta is also a certified personal trainer specializing in
+                  physical development, confidence-building, and functional
+                  capabilities, particularly for those with adaptive needs.
+                </p>
               </div>
             </div>
-            <p className="mt-4 text-xs text-navy/50">
+            <p className="mt-6 text-xs text-navy/50">
               [PLACEHOLDER: headshots to be supplied by the client; optional]
             </p>
           </div>
