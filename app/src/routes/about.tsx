@@ -131,7 +131,14 @@ function AboutPage() {
             </p>
             <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
-                <div className="h-32 w-32 border border-gold/40 bg-cream" aria-hidden="true" />
+                <img
+                  src="/assets/founder-zaheerah.jpg"
+                  alt="Zaheerah McGary Sawyers, founder of Legends Legacy Residence"
+                  width={600}
+                  height={600}
+                  decoding="async"
+                  className="h-40 w-40 border border-gold/40 object-cover"
+                />
                 <h3 className="mt-5 font-display text-xl text-navy">
                   Frontline Expertise: Grounded in Human Dignity
                 </h3>
@@ -155,7 +162,14 @@ function AboutPage() {
                 </p>
               </div>
               <div>
-                <div className="h-32 w-32 border border-gold/40 bg-cream" aria-hidden="true" />
+                <img
+                  src="/assets/founder-celesta.jpg"
+                  alt="Celesta Blanch, co-owner of Legends Legacy Residence"
+                  width={600}
+                  height={600}
+                  decoding="async"
+                  className="h-40 w-40 border border-gold/40 object-cover"
+                />
                 <h3 className="mt-5 font-display text-xl text-navy">
                   The Operational Backbone: Structured for Sustainability
                 </h3>
@@ -191,9 +205,6 @@ function AboutPage() {
                 </p>
               </div>
             </div>
-            <p className="mt-6 text-xs text-navy/50">
-              [PLACEHOLDER: headshots to be supplied by the client; optional]
-            </p>
           </div>
         </section>
 
