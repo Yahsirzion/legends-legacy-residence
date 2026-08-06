@@ -3,8 +3,10 @@ import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { Hero } from "../components/home/Hero";
 import { Mission } from "../components/home/Mission";
+import { WelcomeBand } from "../components/home/WelcomeBand";
 import { LifeHere } from "../components/home/LifeHere";
 import { Honor } from "../components/home/Honor";
+import { PorchSplit } from "../components/home/PorchSplit";
 import { InquiryBanner } from "../components/home/InquiryBanner";
 import { StructuredData } from "../components/StructuredData";
 
@@ -69,8 +71,10 @@ function Index() {
       <main id="main-content">
         <Hero />
         <Mission />
+        <WelcomeBand />
         <LifeHere />
         <Honor />
+        <PorchSplit />
         <InquiryBanner />
       </main>
       <Footer />
