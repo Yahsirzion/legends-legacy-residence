@@ -38,10 +38,30 @@ function IntakePage() {
             <div className="flex flex-col gap-5 border border-gold/40 bg-white p-8">
               <h2 className="font-display text-2xl text-navy">Download the form</h2>
               <p className="text-[0.98rem] text-navy/80">
-                [PLACEHOLDER: the branded, fillable Veteran Housing Intake
-                Form PDF will be linked here once supplied by the client and
-                hosted on this domain.]
+                A short form covering the basics: your contact information,
+                military service, where you are staying now, and any VA
+                benefits. You can fill it in on your computer or print it and
+                write it out by hand.
               </p>
+              <a
+                href="/LLR_Veteran_Housing_Intake_Form.pdf"
+                download
+                className="inline-flex items-center gap-3 self-start border border-navy bg-navy px-6 py-3 font-body text-sm font-semibold tracking-wide text-cream transition-colors hover:bg-navy-deep active:translate-y-px"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16" />
+                </svg>
+                Download the form (PDF)
+              </a>
               <p className="text-[0.95rem] text-navy/80">
                 Once completed, return it to us in person, by mail to 69 State
                 Street, Suite 1300, Albany, NY 12207, by phone with our staff,
