@@ -7,7 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // Every public page is prerendered to static HTML at build time — the site
 // has no server state (the contact form is mailto-based), so it deploys as a
 // plain static site. robots.txt and sitemap.xml are static files in public/.
-const PAGES = ["/", "/about", "/residence", "/families", "/contact", "/intake", "/privacy"];
+const PAGES = ["/", "/about", "/residence", "/reentry", "/families", "/contact", "/intake", "/privacy"];
 
 export default defineConfig({
   plugins: [

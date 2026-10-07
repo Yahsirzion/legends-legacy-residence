@@ -15,6 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as FamiliesRouteImport } from './routes/families'
 import { Route as IntakeRouteImport } from './routes/intake'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ReentryRouteImport } from './routes/reentry'
 import { Route as ResidenceRouteImport } from './routes/residence'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReentryRoute = ReentryRouteImport.update({
+  id: '/reentry',
+  path: '/reentry',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResidenceRoute = ResidenceRouteImport.update({
   id: '/residence',
   path: '/residence',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/families': typeof FamiliesRoute
   '/intake': typeof IntakeRoute
   '/privacy': typeof PrivacyRoute
+  '/reentry': typeof ReentryRoute
   '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/families': typeof FamiliesRoute
   '/intake': typeof IntakeRoute
   '/privacy': typeof PrivacyRoute
+  '/reentry': typeof ReentryRoute
   '/residence': typeof ResidenceRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/families': typeof FamiliesRoute
   '/intake': typeof IntakeRoute
   '/privacy': typeof PrivacyRoute
+  '/reentry': typeof ReentryRoute
   '/residence': typeof ResidenceRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/families'
     | '/intake'
     | '/privacy'
+    | '/reentry'
     | '/residence'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/families'
     | '/intake'
     | '/privacy'
+    | '/reentry'
     | '/residence'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/families'
     | '/intake'
     | '/privacy'
+    | '/reentry'
     | '/residence'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   FamiliesRoute: typeof FamiliesRoute
   IntakeRoute: typeof IntakeRoute
   PrivacyRoute: typeof PrivacyRoute
+  ReentryRoute: typeof ReentryRoute
   ResidenceRoute: typeof ResidenceRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/reentry': {
+      id: '/reentry'
+      path: '/reentry'
+      fullPath: '/reentry'
+      preLoaderRoute: typeof ReentryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/residence': {
       id: '/residence'
       path: '/residence'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   FamiliesRoute: FamiliesRoute,
   IntakeRoute: IntakeRoute,
   PrivacyRoute: PrivacyRoute,
+  ReentryRoute: ReentryRoute,
   ResidenceRoute: ResidenceRoute,
 }
 export const routeTree = rootRouteImport
