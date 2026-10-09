@@ -14,9 +14,14 @@ export const Route = createFileRoute("/residence")({
       {
         name: "description",
         content:
-          "What daily life looks like at Legends Legacy Residence: housing amenities, resident support, convenience, and safety for veteran-focused shared housing in the Albany, NY area.",
+          "What daily life looks like at Legends Legacy Residence: housing amenities, resident support, convenience, and safety for veteran-focused shared housing serving upstate New York, in the Albany, NY area.",
       },
       { property: "og:title", content: "The Residence: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "What daily life looks like at Legends Legacy Residence: housing amenities, resident support, convenience, and safety for veteran-focused shared housing serving upstate New York, in the Albany, NY area.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/residence` }],
   }),
@@ -102,7 +107,10 @@ function ResidencePage() {
                 <ul className="mt-4 space-y-2 text-[0.95rem] text-navy/85">
                   {items.map((item) => (
                     <li key={item} className="flex gap-3">
-                      <span className="mt-2 h-1 w-1 flex-none rounded-full bg-gold" aria-hidden="true" />
+                      <span
+                        className="mt-2 h-1 w-1 flex-none rounded-full bg-gold"
+                        aria-hidden="true"
+                      />
                       <span>{item}</span>
                     </li>
                   ))}

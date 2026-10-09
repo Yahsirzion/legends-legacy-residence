@@ -17,6 +17,11 @@ export const Route = createFileRoute("/privacy")({
       },
       { name: "robots", content: "index, nofollow" },
       { property: "og:title", content: "Privacy Statement: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "How Legends Legacy Residence handles the information you share through this website.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/privacy` }],
   }),
@@ -32,27 +37,24 @@ function PrivacyPage() {
         <section className="bg-cream">
           <div className="mx-auto max-w-[70ch] space-y-6 px-6 py-20 text-[0.98rem] leading-relaxed text-navy/90">
             <p>
-              This website collects only the information you type into our
-              contact and interest forms: your name, phone number, email
-              address, whether you are a veteran, and your preferred contact
-              time. We use it for one purpose, so a member of our team can
-              contact you about housing, which we will do within 3 business
-              days.
+              This website collects only the information you type into our contact and interest
+              forms: your name, phone number, email address, whether you are a veteran, and your
+              preferred contact time. We use it for one purpose, so a member of our team can contact
+              you about housing, which we will do within 3 business days.
             </p>
             <p>
-              We do not sell, rent, or share your information with anyone
-              outside Legends Legacy Residence. It is seen only by our staff.
+              We do not sell, rent, or share your information with anyone outside Legends Legacy
+              Residence. It is seen only by our staff.
             </p>
             <p>
-              Our full Veteran Housing Intake Form is not submitted through
-              this website. You return it directly to us in person, by mail,
-              by phone, or by email if you choose. Please note that standard
-              email is not encrypted, so mail or phone is recommended for
-              sensitive information.
+              Our full Veteran Housing Intake Form is not submitted through this website. You return
+              it directly to us in person, by mail, by phone, or by email if you choose. Please note
+              that standard email is not encrypted, so mail or phone is recommended for sensitive
+              information.
             </p>
             <p>
-              To ask what information we have about you, or to ask us to
-              delete it, contact {EMAIL} or {PHONE_DISPLAY}.
+              To ask what information we have about you, or to ask us to delete it, contact {EMAIL}{" "}
+              or {PHONE_DISPLAY}.
             </p>
           </div>
         </section>

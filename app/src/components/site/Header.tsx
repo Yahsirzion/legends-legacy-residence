@@ -27,12 +27,15 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        {/* Breakpoint is lg, not md: with five sections plus the phone and
+            the intake CTA, a one-line row does not fit a 768px tablet. Below
+            lg the dropdown is used, which also carries the region labels. */}
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="font-body text-sm font-medium text-cream/90 transition-colors hover:text-gold"
+              className="whitespace-nowrap font-body text-sm font-medium text-cream/90 transition-colors hover:text-gold"
               activeProps={{ className: "text-gold" }}
             >
               {link.label}
@@ -40,13 +43,13 @@ export function Header() {
           ))}
           <a
             href={PHONE_TEL}
-            className="font-body text-sm font-medium text-cream/90 transition-colors hover:text-gold"
+            className="whitespace-nowrap font-body text-sm font-medium text-cream/90 transition-colors hover:text-gold"
           >
             {PHONE_DISPLAY}
           </a>
           <Link
             to="/intake"
-            className="border border-gold bg-gold px-5 py-2.5 font-display text-sm tracking-[0.03em] text-navy-deep transition-colors hover:bg-gold-light"
+            className="whitespace-nowrap border border-gold bg-gold px-5 py-2.5 font-display text-sm tracking-[0.03em] text-navy-deep transition-colors hover:bg-gold-light"
           >
             Begin Your Intake
           </Link>
@@ -54,7 +57,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex items-center gap-2 border border-gold/40 px-3 py-2 text-cream md:hidden"
+          className="flex items-center gap-2 border border-gold/40 px-3 py-2 text-cream lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -67,7 +70,7 @@ export function Header() {
         <nav
           id="mobile-nav"
           aria-label="Primary mobile"
-          className="border-t border-gold/20 bg-navy px-6 py-4 md:hidden"
+          className="border-t border-gold/20 bg-navy px-6 py-4 lg:hidden"
         >
           <ul className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
@@ -78,6 +81,11 @@ export function Header() {
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
+                  {link.region ? (
+                    <span className="mt-1 block font-body text-xs font-semibold uppercase tracking-[0.12em] text-gold/85">
+                      {link.region}
+                    </span>
+                  ) : null}
                 </Link>
               </li>
             ))}

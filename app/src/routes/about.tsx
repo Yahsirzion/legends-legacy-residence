@@ -18,6 +18,11 @@ export const Route = createFileRoute("/about")({
           "The founder's story behind Legends Legacy Residence, our mission and vision, and how we're structured as veteran-focused shared housing in the Albany, NY area.",
       },
       { property: "og:title", content: "About: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "The founder's story behind Legends Legacy Residence, our mission and vision, and how we're structured as veteran-focused shared housing in the Albany, NY area.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
@@ -28,9 +33,7 @@ function StoryPart({ heading, children }: { heading: string; children: ReactNode
   return (
     <div className="max-w-[65ch]">
       <h2 className="font-display text-xl text-navy">{heading}</h2>
-      <div className="mt-4 space-y-4 text-[0.98rem] leading-relaxed text-navy/85">
-        {children}
-      </div>
+      <div className="mt-4 space-y-4 text-[0.98rem] leading-relaxed text-navy/85">{children}</div>
     </div>
   );
 }
@@ -53,63 +56,53 @@ function AboutPage() {
           <div className="mx-auto flex max-w-[1140px] flex-col gap-16 px-6 py-20">
             <StoryPart heading="The Catalyst: A Promise to Those Who Served">
               <p>
-                The vision for Legends Legacy Residence was born from a
-                painful and deeply personal reality. It is a heartbreaking
-                contradiction to watch family members who have proudly served
-                our country reduced to sitting outside convenience stores or
-                along the side of the highway, asking for spare change. These
-                are men and women who sacrificed for our national security,
-                yet returned home to find themselves without the most basic
-                human necessities, a stable place to lay their heads and a
-                safe place to shower. Witnessing this indignity firsthand made
-                it clear that gratitude for our veterans must go beyond words;
-                it requires actionable, sustainable housing solutions.
+                The vision for Legends Legacy Residence was born from a painful and deeply personal
+                reality. It is a heartbreaking contradiction to watch family members who have
+                proudly served our country reduced to sitting outside convenience stores or along
+                the side of the highway, asking for spare change. These are men and women who
+                sacrificed for our national security, yet returned home to find themselves without
+                the most basic human necessities, a stable place to lay their heads and a safe place
+                to shower. Witnessing this indignity firsthand made it clear that gratitude for our
+                veterans must go beyond words; it requires actionable, sustainable housing
+                solutions.
               </p>
             </StoryPart>
 
             <StoryPart heading="Frontline Expertise: Grounded in Human Dignity">
               <p>
-                Passion alone is not enough to operate a successful
-                residential community; it requires practical, frontline
-                expertise. As a Direct Support Professional, Zaheerah McGary
-                Sawyers built a career on the ground floor of human services.
-                This hands-on experience provided a deep understanding of what
-                it takes to support individuals with empathy, manage complex
-                residential dynamics, and empower people to maintain their
-                daily dignity. It instilled a core philosophy that housing is
-                not just about four walls, it is about fostering an
-                environment where individuals feel seen, respected, and
-                capable of self-direction.
+                Passion alone is not enough to operate a successful residential community; it
+                requires practical, frontline expertise. As a Direct Support Professional, Zaheerah
+                McGary Sawyers built a career on the ground floor of human services. This hands-on
+                experience provided a deep understanding of what it takes to support individuals
+                with empathy, manage complex residential dynamics, and empower people to maintain
+                their daily dignity. It instilled a core philosophy that housing is not just about
+                four walls, it is about fostering an environment where individuals feel seen,
+                respected, and capable of self-direction.
               </p>
             </StoryPart>
 
             <StoryPart heading="The Operational Backbone: Structured for Sustainability">
               <p>
-                To turn this mission into a reality, compassion had to be
-                paired with strong operational execution. Legends Legacy
-                Residence LLC was established to be a robust, professionally
-                managed entity. Through the joint leadership and operational
-                synergy between Zaheerah and co-owner Celesta Blanch, the
-                organization has the structural stability necessary to
-                navigate the complexities of real estate, property
-                management, and strategic growth. This partnership ensures
-                that funders and community partners are investing in a
-                capable, organized team that can sustain the mission for the
-                long haul.
+                To turn this mission into a reality, compassion had to be paired with strong
+                operational execution. Legends Legacy Residence LLC was established to be a robust,
+                professionally managed entity. Through the joint leadership and operational synergy
+                between Zaheerah and co-owner Celesta Blanch, the organization has the structural
+                stability necessary to navigate the complexities of real estate, property
+                management, and strategic growth. This partnership ensures that funders and
+                community partners are investing in a capable, organized team that can sustain the
+                mission for the long haul.
               </p>
             </StoryPart>
 
             <StoryPart heading="The Vision: Restoring Autonomy and Security">
               <p>
-                Today, Legends Legacy Residence stands as a direct response to
-                the housing gaps that leave too many veterans behind. We
-                operate under a clear, non-clinical independent tenant model
-                because we believe in empowerment, not institutionalization.
-                By providing a stable, high-quality shared home where veterans
-                manage their own meals, routines, and healthcare appointments,
-                we offer more than just a roof. We provide the secure
-                foundation they need to reclaim their autonomy, build peer
-                support, and live with the dignity they earned.
+                Today, Legends Legacy Residence stands as a direct response to the housing gaps that
+                leave too many veterans behind. We operate under a clear, non-clinical independent
+                tenant model because we believe in empowerment, not institutionalization. By
+                providing a stable, high-quality shared home where veterans manage their own meals,
+                routines, and healthcare appointments, we offer more than just a roof. We provide
+                the secure foundation they need to reclaim their autonomy, build peer support, and
+                live with the dignity they earned.
               </p>
             </StoryPart>
           </div>
@@ -122,12 +115,11 @@ function AboutPage() {
             <h2 className="font-display text-2xl text-navy">Leadership</h2>
             <span className="rule-double mt-5" aria-hidden="true" />
             <p className="mt-6 max-w-[65ch] text-navy/90">
-              The partnership between Zaheerah McGary Sawyers and Celesta
-              Blanch combines frontline human services experience with decades
-              of expertise in property management, insurance, risk management,
-              and business operations. Together, they provide the compassionate
-              leadership and professional oversight necessary to develop safe,
-              sustainable veteran housing.
+              The partnership between Zaheerah McGary Sawyers and Celesta Blanch combines frontline
+              human services experience with decades of expertise in property management, insurance,
+              risk management, and business operations. Together, they provide the compassionate
+              leadership and professional oversight necessary to develop safe, sustainable veteran
+              housing.
             </p>
             <div className="mt-12 grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
@@ -146,18 +138,16 @@ function AboutPage() {
                   Led by Zaheerah McGary Sawyers
                 </p>
                 <p className="mt-4 text-navy/90">
-                  <strong className="font-semibold text-navy">Hands-On Empathy:</strong>{" "}
-                  As a Direct Support Professional, Zaheerah built a career on
-                  the ground floor of human services. This experience provided
-                  a deep understanding of what it takes to support
-                  individuals, manage complex residential dynamics, and
-                  empower people to maintain their daily dignity.
+                  <strong className="font-semibold text-navy">Hands-On Empathy:</strong> As a Direct
+                  Support Professional, Zaheerah built a career on the ground floor of human
+                  services. This experience provided a deep understanding of what it takes to
+                  support individuals, manage complex residential dynamics, and empower people to
+                  maintain their daily dignity.
                 </p>
                 <p className="mt-4 text-navy/90">
                   <strong className="font-semibold text-navy">A Resident-First Philosophy:</strong>{" "}
-                  She instills a core belief that housing is not just about
-                  four walls — it is about fostering an environment where
-                  individuals feel seen, respected, and capable of
+                  She instills a core belief that housing is not just about four walls — it is about
+                  fostering an environment where individuals feel seen, respected, and capable of
                   self-direction.
                 </p>
               </div>
@@ -173,35 +163,30 @@ function AboutPage() {
                 <h3 className="mt-5 font-display text-xl text-navy">
                   The Operational Backbone: Structured for Sustainability
                 </h3>
-                <p className="mt-1 text-sm font-semibold text-navy/70">
-                  Led by Celesta Blanch
-                </p>
+                <p className="mt-1 text-sm font-semibold text-navy/70">Led by Celesta Blanch</p>
                 <p className="mt-4 text-navy/90">
                   <strong className="font-semibold text-navy">
                     Strategic Stability &amp; Property Management:
                   </strong>{" "}
-                  Bringing 6 years of hands-on experience in rental property
-                  management and homeownership, Celesta ensures the
-                  organization's physical assets and real estate operations
-                  run efficiently and safely.
+                  Bringing 6 years of hands-on experience in rental property management and
+                  homeownership, Celesta ensures the organization's physical assets and real estate
+                  operations run efficiently and safely.
                 </p>
                 <p className="mt-4 text-navy/90">
                   <strong className="font-semibold text-navy">
                     Financial &amp; Risk Responsibility:
                   </strong>{" "}
-                  As an experienced professional with 30 years in the
-                  insurance industry — specializing in multi-state operations,
-                  regulatory compliance, claims recovery, and liability — her
-                  oversight provides the structural stability necessary to
-                  assure funders and community partners that they are
-                  investing in a capable, organized team equipped to sustain
-                  the mission for the long haul.
+                  As an experienced professional with 30 years in the insurance industry —
+                  specializing in multi-state operations, regulatory compliance, claims recovery,
+                  and liability — her oversight provides the structural stability necessary to
+                  assure funders and community partners that they are investing in a capable,
+                  organized team equipped to sustain the mission for the long haul.
                 </p>
                 <p className="mt-4 text-navy/90">
                   <strong className="font-semibold text-navy">Holistic Wellness Support:</strong>{" "}
-                  Celesta is also a certified personal trainer specializing in
-                  physical development, confidence-building, and functional
-                  capabilities, particularly for those with adaptive needs.
+                  Celesta is also a certified personal trainer specializing in physical development,
+                  confidence-building, and functional capabilities, particularly for those with
+                  adaptive needs.
                 </p>
               </div>
             </div>
@@ -216,21 +201,19 @@ function AboutPage() {
               <div>
                 <h2 className="font-display text-lg text-gold-light">Mission</h2>
                 <p className="mt-3 font-display text-xl leading-relaxed text-cream">
-                  Our mission is to serve those who served us. At Legends
-                  Legacy Residence, we cultivate a community where every
-                  veteran's story is honored, their legacy is celebrated, and
-                  their daily life is supported with compassionate, expert
-                  care in a place they are proud to call home.
+                  Our mission is to serve those who served us. At Legends Legacy Residence, we
+                  cultivate a community where every veteran's story is honored, their legacy is
+                  celebrated, and their daily life is supported with compassionate, expert care in a
+                  place they are proud to call home.
                 </p>
               </div>
               <div>
                 <h2 className="font-display text-lg text-gold-light">Vision</h2>
                 <p className="mt-3 font-display text-xl leading-relaxed text-cream">
-                  To be the premier sanctuary where our nation's heroes find a
-                  lifetime of belonging — ensuring their legacies are
-                  eternally celebrated, their stories are preserved, and their
-                  lives are enriched by the highest standard of compassionate,
-                  expert care.
+                  To be the premier sanctuary where our nation's heroes find a lifetime of belonging
+                  — ensuring their legacies are eternally celebrated, their stories are preserved,
+                  and their lives are enriched by the highest standard of compassionate, expert
+                  care.
                 </p>
               </div>
             </div>
@@ -255,9 +238,9 @@ function AboutPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-[760px] px-6 pb-20 text-center">
             <p className="text-[0.98rem] text-navy/80">
-              Legends Legacy Residence also welcomes conversations with
-              funders and community partners who share this mission. Reach us
-              at <EmailLink tone="dark" className="align-baseline" />.
+              Legends Legacy Residence also welcomes conversations with funders and community
+              partners who share this mission. Reach us at{" "}
+              <EmailLink tone="dark" className="align-baseline" />.
             </p>
           </div>
         </section>

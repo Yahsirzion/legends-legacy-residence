@@ -17,6 +17,11 @@ export const Route = createFileRoute("/contact")({
           "Reach Legends Legacy Residence by phone, email, or message. A member of our team responds within 3 business days.",
       },
       { property: "og:title", content: "Contact: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "Reach Legends Legacy Residence by phone, email, or message. A member of our team responds within 3 business days.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),

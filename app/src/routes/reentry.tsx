@@ -20,11 +20,16 @@ export const Route = createFileRoute("/reentry")({
       {
         name: "description",
         content:
-          "Community Reentry Transitional Residence, a program in development from Legends Legacy Residence LLC in the Albany, NY area. Contact us to learn more.",
+          "Community Reentry Transitional Residence, a program in development from Legends Legacy Residence LLC serving Long Island, NY. Contact us to learn more.",
       },
       {
         property: "og:title",
         content: "Community Reentry Transitional Residence: Legends Legacy Residence",
+      },
+      {
+        property: "og:description",
+        content:
+          "Community Reentry Transitional Residence, a program in development from Legends Legacy Residence LLC serving Long Island, NY. Contact us to learn more.",
       },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/reentry` }],
@@ -40,26 +45,25 @@ function ReentryPage() {
         <PageHero
           eyebrow="In Development"
           title="Community Reentry Transitional Residence"
-          subtitle="A separate program from Legends Legacy Residence LLC. Details are being finalized."
+          subtitle="Serving Long Island, NY. A separate program from Legends Legacy Residence LLC, with details still being finalized."
         />
 
         <section className="bg-cream">
           <div className="mx-auto max-w-[70ch] space-y-6 px-6 py-20 text-[0.98rem] leading-relaxed text-navy/90">
             <p>
-              Legends Legacy Residence LLC is developing a Community Reentry
-              Transitional Residence alongside our veteran housing. Program
-              details, including who it serves, eligibility, and availability,
-              are still being finalized.
+              Legends Legacy Residence LLC is developing a Community Reentry Transitional Residence
+              on Long Island, New York. It is a separate program from our veteran housing, which
+              serves upstate New York. Details, including who it serves, eligibility, and
+              availability, are still being finalized.
             </p>
             <p>
-              We will publish the full description here once it is confirmed.
-              In the meantime, we would rather answer your questions directly
-              than leave you guessing.
+              We will publish the full description here once it is confirmed. In the meantime, we
+              would rather answer your questions directly than leave you guessing.
             </p>
             <p>
-              If you are looking for housing, work at a referring agency, or
-              want to explore partnering with us on this program, please reach
-              out. We respond within 3 business days.
+              If you are looking for housing, work at a referring agency, or want to explore
+              partnering with us on this program, please reach out. We respond within 3 business
+              days.
             </p>
           </div>
         </section>
@@ -73,7 +77,7 @@ function ReentryPage() {
               <EmailLink />
             </div>
             <p className="mt-10 max-w-[60ch] text-[0.95rem] text-navy/70">
-              Looking for our veteran housing instead? The{" "}
+              Looking for our veteran housing in upstate New York instead? The{" "}
               <a
                 href="/residence"
                 className="underline decoration-gold underline-offset-4 hover:text-flame-purple"

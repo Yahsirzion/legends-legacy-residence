@@ -16,6 +16,11 @@ export const Route = createFileRoute("/intake")({
           "Start your Veteran Housing Intake with Legends Legacy Residence: download the intake form or call us, and hear back within 3 business days.",
       },
       { property: "og:title", content: "Housing Intake: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "Start your Veteran Housing Intake with Legends Legacy Residence: download the intake form or call us, and hear back within 3 business days.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/intake` }],
   }),
@@ -38,10 +43,9 @@ function IntakePage() {
             <div className="flex flex-col gap-5 border border-gold/40 bg-white p-8">
               <h2 className="font-display text-2xl text-navy">Download the form</h2>
               <p className="text-[0.98rem] text-navy/80">
-                A short form covering the basics: your contact information,
-                military service, where you are staying now, and any VA
-                benefits. You can fill it in on your computer or print it and
-                write it out by hand.
+                A short form covering the basics: your contact information, military service, where
+                you are staying now, and any VA benefits. You can fill it in on your computer or
+                print it and write it out by hand.
               </p>
               <a
                 href="/LLR_Veteran_Housing_Intake_Form.pdf"
@@ -63,11 +67,10 @@ function IntakePage() {
                 Download the form (PDF)
               </a>
               <p className="text-[0.95rem] text-navy/80">
-                Once completed, return it to us in person, by mail to 69 State
-                Street, Suite 1300, Albany, NY 12207, by phone with our staff,
-                or by email to {EMAIL}. Mail or phone is recommended for
-                sensitive information; standard email is not encrypted, so
-                email is accepted only if that is your informed choice.
+                Once completed, return it to us in person, by mail to 69 State Street, Suite 1300,
+                Albany, NY 12207, by phone with our staff, or by email to {EMAIL}. Mail or phone is
+                recommended for sensitive information; standard email is not encrypted, so email is
+                accepted only if that is your informed choice.
               </p>
             </div>
 
@@ -82,9 +85,8 @@ function IntakePage() {
 
           <div className="mx-auto max-w-[1140px] px-6 pb-20">
             <p className="max-w-[60ch] text-[0.95rem] text-navy/80">
-              After you reach out, a member of our team will contact you
-              within 3 business days. Read how we handle what you share in
-              our{" "}
+              After you reach out, a member of our team will contact you within 3 business days.
+              Read how we handle what you share in our{" "}
               <Link to="/privacy" className="underline decoration-gold underline-offset-4">
                 privacy statement
               </Link>

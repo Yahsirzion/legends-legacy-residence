@@ -54,6 +54,11 @@ export const Route = createFileRoute("/families")({
           "Answers for adult children researching veteran housing for a parent: what to expect, how to start the conversation, and what Legends Legacy Residence provides.",
       },
       { property: "og:title", content: "For Families: Legends Legacy Residence" },
+      {
+        property: "og:description",
+        content:
+          "Answers for adult children researching veteran housing for a parent: what to expect, how to start the conversation, and what Legends Legacy Residence provides.",
+      },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/families` }],
   }),
