@@ -72,7 +72,9 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+// TanStack types `error` as unknown, so keep the signature wide and let the
+// console do the narrowing; nothing here renders the error to the visitor.
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
 
