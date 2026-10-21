@@ -10,13 +10,13 @@ import { SITE_URL } from "../lib/site";
 export const Route = createFileRoute("/residence")({
   head: () => ({
     meta: [
-      { title: "The Residence: Legends Legacy Residence" },
+      { title: "Veteran Shared Housing in Upstate New York: The Residence" },
       {
         name: "description",
         content:
           "What daily life looks like at Legends Legacy Residence: housing amenities, resident support, convenience, and safety for veteran-focused shared housing serving upstate New York, in the Albany, NY area.",
       },
-      { property: "og:title", content: "The Residence: Legends Legacy Residence" },
+      { property: "og:title", content: "Veteran Shared Housing in Upstate New York: The Residence" },
       {
         property: "og:description",
         content:

@@ -9,13 +9,13 @@ import { SITE_URL } from "../lib/site";
 export const Route = createFileRoute("/intake")({
   head: () => ({
     meta: [
-      { title: "Housing Intake: Legends Legacy Residence" },
+      { title: "Veteran Housing Application: Legends Legacy Residence" },
       {
         name: "description",
         content:
           "Start your Veteran Housing Intake with Legends Legacy Residence: download the intake form or call us, and hear back within 3 business days.",
       },
-      { property: "og:title", content: "Housing Intake: Legends Legacy Residence" },
+      { property: "og:title", content: "Veteran Housing Application: Legends Legacy Residence" },
       {
         property: "og:description",
         content:

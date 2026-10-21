@@ -47,13 +47,13 @@ const FAQ_SCHEMA = JSON.stringify({
 export const Route = createFileRoute("/families")({
   head: () => ({
     meta: [
-      { title: "For Families: Legends Legacy Residence" },
+      { title: "Veteran Housing for a Parent: Help for Families" },
       {
         name: "description",
         content:
           "Answers for adult children researching veteran housing for a parent: what to expect, how to start the conversation, and what Legends Legacy Residence provides.",
       },
-      { property: "og:title", content: "For Families: Legends Legacy Residence" },
+      { property: "og:title", content: "Veteran Housing for a Parent: Help for Families" },
       {
         property: "og:description",
         content:

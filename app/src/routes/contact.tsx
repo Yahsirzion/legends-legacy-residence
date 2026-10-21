@@ -10,13 +10,13 @@ import { SITE_URL } from "../lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact: Legends Legacy Residence" },
+      { title: "Contact Legends Legacy Residence: Veteran Housing, NY" },
       {
         name: "description",
         content:
           "Reach Legends Legacy Residence by phone, email, or message. A member of our team responds within 3 business days.",
       },
-      { property: "og:title", content: "Contact: Legends Legacy Residence" },
+      { property: "og:title", content: "Contact Legends Legacy Residence: Veteran Housing, NY" },
       {
         property: "og:description",
         content:
