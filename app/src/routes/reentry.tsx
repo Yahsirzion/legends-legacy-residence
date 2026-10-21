@@ -18,12 +18,9 @@ const DESCRIPTION =
 export const Route = createFileRoute("/reentry")({
   head: () => ({
     meta: [
-      { title: "Community Reentry Transitional Residence: Long Island, NY" },
+      { title: "Community Reentry Transitional Residence" },
       { name: "description", content: DESCRIPTION },
-      {
-        property: "og:title",
-        content: "Second Chance. A Place to Call Home.",
-      },
+      { property: "og:title", content: "Community Reentry Transitional Residence" },
       { property: "og:description", content: DESCRIPTION },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/reentry` }],
