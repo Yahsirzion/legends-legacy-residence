@@ -7,6 +7,7 @@ import { LicensingDisclosure } from "../components/site/LicensingDisclosure";
 import { ShieldIcon, KeyIcon, LaurelIcon, TorchIcon } from "../components/site/icons";
 import { LifeHere } from "../components/home/LifeHere";
 import { PorchSplit } from "../components/home/PorchSplit";
+import { WelcomeBand } from "../components/home/WelcomeBand";
 
 import { SITE_URL } from "../lib/site";
 
@@ -146,6 +147,10 @@ function ResidencePage() {
           </div>
         </section>
 
+        <WelcomeBand
+          src="/assets/home-welcome.jpg"
+          alt="An American flag hanging from the porch of a house on a quiet, tree-lined street in warm afternoon light."
+        />
         <LifeHere />
         <PorchSplit />
         <LicensingDisclosure />

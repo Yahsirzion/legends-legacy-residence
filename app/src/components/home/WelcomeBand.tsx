@@ -1,19 +1,28 @@
 /**
- * Full-bleed atmospheric band between the mission statement and "Life Here".
- * Per CLAUDE.md §5.2's dignity rule, the imagery shows the answer (the home,
- * the porch, the welcome) rather than the hardship the founder story names.
+ * Full-bleed atmospheric band. Per CLAUDE.md §5.2's dignity rule the imagery
+ * shows the answer (keys, a door, a home) rather than the hardship the copy
+ * names, and deliberately never stages a person as a resident or as someone
+ * with a history they did not consent to being shown with.
  * Licensed under the Unsplash License (free commercial use).
  */
-export function WelcomeBand() {
+type Props = {
+  src?: string;
+  alt?: string;
+};
+
+export function WelcomeBand({
+  src = "/assets/home-newstart.jpg",
+  alt = "A hand holding keys with a house keyring, a warm lit home visible through the open doorway behind.",
+}: Props) {
   return (
-    <section aria-label="A home and porch on a tree-lined street" className="relative bg-navy">
+    <section aria-label="A new home" className="relative bg-navy">
       <img
-        src="/assets/home-welcome.jpg"
-        alt="An American flag hanging from the porch of a house on a quiet, tree-lined street in warm afternoon light."
-        width={1900}
-        height={1000}
+        src={src}
+        alt={alt}
+        width={1700}
+        height={665}
         decoding="async"
-        className="h-[42vh] min-h-[280px] w-full object-cover md:h-[52vh]"
+        className="h-[38vh] min-h-[240px] w-full object-cover md:h-[46vh]"
       />
       <span
         aria-hidden="true"
