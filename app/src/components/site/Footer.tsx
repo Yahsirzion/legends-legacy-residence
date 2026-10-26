@@ -20,8 +20,8 @@ export function Footer() {
                 Legends Legacy Residence
               </span>
             </div>
-            <p className="mt-3 font-body text-xs uppercase tracking-[0.14em] text-gold">
-              A Home for Veterans
+            <p className="mt-3 max-w-[30ch] font-body text-xs uppercase tracking-[0.14em] text-gold">
+              Transitional Housing in New York
             </p>
           </div>
 

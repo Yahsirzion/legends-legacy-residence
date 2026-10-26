@@ -2,11 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { Hero } from "../components/home/Hero";
-import { Mission } from "../components/home/Mission";
+import { Programs } from "../components/home/Programs";
+import { ReentryLead } from "../components/home/ReentryLead";
 import { WelcomeBand } from "../components/home/WelcomeBand";
-import { LifeHere } from "../components/home/LifeHere";
-import { Honor } from "../components/home/Honor";
-import { PorchSplit } from "../components/home/PorchSplit";
+import { VeteransComingSoon } from "../components/home/VeteransComingSoon";
 import { InquiryBanner } from "../components/home/InquiryBanner";
 import { StructuredData } from "../components/StructuredData";
 
@@ -27,7 +26,7 @@ const SCHEMA = JSON.stringify({
       url: SITE_URL,
       logo: `${SITE_URL}/assets/logo-mark.png`,
       description:
-        "A home for veterans opening soon in the Albany, NY area, offering veteran-focused shared housing with independence, dignity, and support.",
+        "Legends Legacy Residence LLC operates transitional housing in New York: a Community Reentry Transitional Residence on Long Island, and veteran shared housing in upstate New York.",
       telephone: "+1-518-849-8008",
       email: "info@legendslegacyresidence.com",
       // Service regions, which is what local searches actually match on.
@@ -75,17 +74,17 @@ const SCHEMA = JSON.stringify({
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Legends Legacy Residence: Veteran Housing, Upstate NY" },
+      { title: "Legends Legacy Residence: Transitional Housing in New York" },
       {
         name: "description",
         content:
-          "Legends Legacy Residence is a home for veterans opening soon in the Albany, NY area. Veteran-focused shared housing with dignity and support. Begin your intake today.",
+          "Legends Legacy Residence runs transitional housing in New York: our Community Reentry Transitional Residence on Long Island, and veteran shared housing upstate, coming soon.",
       },
-      { property: "og:title", content: "Legends Legacy Residence: Veteran Housing, Upstate NY" },
+      { property: "og:title", content: "Legends Legacy Residence: Transitional Housing in New York" },
       {
         property: "og:description",
         content:
-          "A home for veterans opening soon in the Albany, NY area. Begin your intake today.",
+          "Community Reentry Transitional Residence on Long Island, plus veteran housing upstate, coming soon.",
       },
       { property: "og:url", content: SITE_URL },
     ],
@@ -101,11 +100,10 @@ function Index() {
       <Header />
       <main id="main-content">
         <Hero />
-        <Mission />
+        <Programs />
+        <ReentryLead />
+        <VeteransComingSoon />
         <WelcomeBand />
-        <LifeHere />
-        <Honor />
-        <PorchSplit />
         <InquiryBanner />
       </main>
       <Footer />

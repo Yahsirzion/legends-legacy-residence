@@ -1,6 +1,14 @@
 import { PrimaryCta } from "../site/PrimaryCta";
 import { PhoneLink } from "../site/ContactLinks";
 
+/**
+ * Organization-level hero. The confirmed veterans tagline ("The respect they
+ * earned. The home they deserve.") is not used here any more, because the home
+ * page now fronts two programs and that line speaks only to one; it leads the
+ * veteran residence page instead, so the client's confirmed wording is kept
+ * where it belongs. "A place to call home" is drawn from the client's own
+ * reentry copy and reads true for both residences.
+ */
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-navy">
@@ -16,19 +24,20 @@ export function Hero() {
         }}
       />
       <div className="relative mx-auto flex max-w-[1140px] flex-col gap-6 px-6 py-24 md:py-32">
-        <p className="fade-up-mount eyebrow eyebrow--on-navy">Opening Soon</p>
-        <h1 className="fade-up-mount max-w-[16ch] font-display text-4xl leading-[1.1] text-gold md:text-6xl">
-          The respect they earned.
-          <br />
-          <span className="ml-4 text-gold-light md:ml-10">The home they deserve.</span>
+        <p className="fade-up-mount eyebrow eyebrow--on-navy">
+          Supportive Housing in New York
+        </p>
+        <h1 className="fade-up-mount max-w-[15ch] font-display text-4xl leading-[1.1] text-gold md:text-6xl">
+          A place to call home.
         </h1>
         <span className="rule-double fade-up-mount" aria-hidden="true" />
-        <p className="fade-up-mount max-w-[42ch] text-lg text-cream/90">
-          Intake is open. Begin your application now, and be among the first
-          residents when we open our doors.
+        <p className="fade-up-mount max-w-[46ch] text-lg text-cream/90">
+          Legends Legacy Residence runs transitional housing in New York. Our
+          Community Reentry Transitional Residence serves Long Island. Our
+          veteran residence in upstate New York is coming soon.
         </p>
         <div className="fade-up-mount mt-2 flex flex-wrap items-center gap-6">
-          <PrimaryCta to="/intake">Begin Your Intake</PrimaryCta>
+          <PrimaryCta to="/reentry">Community Reentry</PrimaryCta>
           <PhoneLink tone="light" />
         </div>
       </div>

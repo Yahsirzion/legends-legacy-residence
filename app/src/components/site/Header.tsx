@@ -17,13 +17,13 @@ export function Header() {
             width={44}
             height={44}
           />
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-lg tracking-wide text-cream">
-              Legends Legacy Residence
-            </span>
-            <span className="font-body text-[0.7rem] uppercase tracking-[0.14em] text-gold">
-              A Home for Veterans
-            </span>
+          {/* The "A Home for Veterans" descriptor was removed here: the
+              organization now runs two programs, and that line named only
+              one of them on every page. The supplied logo artwork still
+              carries the words, so a neutral mark is a client/designer
+              decision, not something to fake by cropping. */}
+          <span className="font-display text-lg tracking-wide text-cream">
+            Legends Legacy Residence
           </span>
         </Link>
 

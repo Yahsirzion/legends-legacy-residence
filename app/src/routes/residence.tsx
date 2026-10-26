@@ -2,8 +2,11 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { PageHero } from "../components/site/PageHero";
+import { ComingSoonBanner } from "../components/site/ComingSoonBanner";
 import { LicensingDisclosure } from "../components/site/LicensingDisclosure";
 import { ShieldIcon, KeyIcon, LaurelIcon, TorchIcon } from "../components/site/icons";
+import { LifeHere } from "../components/home/LifeHere";
+import { PorchSplit } from "../components/home/PorchSplit";
 
 import { SITE_URL } from "../lib/site";
 
@@ -94,9 +97,11 @@ function ResidencePage() {
       <main id="main-content">
         <PageHero
           eyebrow="The Residence"
-          title="What life here provides"
+          title="The respect they earned. The home they deserve."
           subtitle="Furnished, structured, and supported shared housing, built around independence rather than institutional routine."
         />
+
+        <ComingSoonBanner />
 
         <section className="bg-cream">
           <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-10 px-6 py-20 md:grid-cols-2">
@@ -141,6 +146,8 @@ function ResidencePage() {
           </div>
         </section>
 
+        <LifeHere />
+        <PorchSplit />
         <LicensingDisclosure />
       </main>
       <Footer />

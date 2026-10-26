@@ -12,9 +12,9 @@ import type { ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { SITE_URL, SITE_NAME } from "../lib/site";
 
-const DEFAULT_TITLE = "Legends Legacy Residence: A Home for Veterans";
+const DEFAULT_TITLE = "Legends Legacy Residence: Transitional Housing in New York";
 const DEFAULT_DESCRIPTION =
-  "A home for veterans opening soon in the Albany, NY area. Veteran-focused shared housing with dignity, structure, and support. Begin your intake today.";
+  "Legends Legacy Residence runs transitional housing in New York: a Community Reentry Transitional Residence on Long Island, and veteran shared housing upstate, coming soon.";
 
 function buildHead() {
   const ogImage = `${SITE_URL}/assets/og-cover.png`;

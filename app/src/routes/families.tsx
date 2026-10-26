@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "../components/site/Header";
 import { Footer } from "../components/site/Footer";
 import { PageHero } from "../components/site/PageHero";
+import { ComingSoonBanner } from "../components/site/ComingSoonBanner";
 import { PrimaryCta } from "../components/site/PrimaryCta";
 import { StructuredData } from "../components/StructuredData";
 
@@ -76,6 +77,8 @@ function FamiliesPage() {
           title="Researching a home for your veteran"
           subtitle="Straightforward answers for adult children weighing this decision for a parent."
         />
+
+        <ComingSoonBanner />
 
         <section className="bg-cream">
           <div className="mx-auto max-w-[820px] px-6 py-20">

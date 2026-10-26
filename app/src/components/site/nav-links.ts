@@ -4,10 +4,10 @@
 // Empty string means no region line.
 export const NAV_LINKS = [
   { to: "/about", label: "About", region: "" },
-  { to: "/residence", label: "The Residence", region: "Upstate New York" },
   // Short label keeps the desktop header on one line; the full program name,
   // "Community Reentry Transitional Residence", is the page heading and title.
   { to: "/reentry", label: "Community Reentry", region: "Long Island, NY" },
+  { to: "/residence", label: "The Residence", region: "Upstate New York" },
   { to: "/families", label: "For Families", region: "" },
   { to: "/contact", label: "Contact", region: "" },
 ] as const;
